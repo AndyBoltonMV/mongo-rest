@@ -1,5 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"); // Import Mongoose so we can create models
 
+// Mongoose Schema definition, this defines the structure o our User database model
 const userSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -17,6 +18,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
+// Mongoose model method creates a Model with our Schema
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
